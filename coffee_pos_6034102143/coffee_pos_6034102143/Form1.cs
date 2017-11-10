@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace coffee_pos_6034102143
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroForm
     {
         List<Tuple<string, string>> product = new List<Tuple<string, string>>();
         bool ok=false,click=false;
