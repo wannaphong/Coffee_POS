@@ -27,7 +27,7 @@ namespace coffee_pos_6034102143
         private void ok_pay_Click(object sender, EventArgs e)
         {
             if (ok == false) {
-                tabControl1.Controls.Add(Payment); // เพิ่ม Payment
+                tabControl1.TabPages.Insert(1,Payment); // เพิ่ม Payment
                 ok = true;
                 tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
             }
