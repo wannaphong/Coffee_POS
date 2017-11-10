@@ -1,12 +1,11 @@
-﻿using MetroFramework.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace coffee_pos_6034102143
 {
-    public partial class Form1 : MetroForm
+    public partial class Form1 : Form
     {
         List<Tuple<string, string>> product = new List<Tuple<string, string>>();
         bool ok=false,click=false;
@@ -156,17 +155,17 @@ namespace coffee_pos_6034102143
 
         private void GreenIce_hot_Click(object sender, EventArgs e)
         {
-            showlist("20", "GreenIce (Hot)");
+            showlist("20", "Green Tea (Hot)");
         }
 
         private void GreenIce_ice_Click(object sender, EventArgs e)
         {
-            showlist("25", "GreenIce (Ice)");
+            showlist("25", "Green Tea (Ice)");
         }
 
         private void GreenIce_frappe_Click(object sender, EventArgs e)
         {
-            showlist("30", "GreenIce (Frappe)");
+            showlist("30", "Green Tea (Frappe)");
         }
 
         private void Thai_Tea_hot_Click(object sender, EventArgs e)

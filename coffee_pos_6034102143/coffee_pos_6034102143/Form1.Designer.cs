@@ -691,8 +691,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 375);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Esspresso\r\n\r\nAmericano\r\n\r\nLatte\r\n\r\nMocha\r\n\r\nCappuccino\r\n\r\nGreenIce\r\n\r\nThai Tea\r\n\r" +
-    "\nCoCoa";
+            this.label2.Text = "Esspresso\r\n\r\nAmericano\r\n\r\nLatte\r\n\r\nMocha\r\n\r\nCappuccino\r\n\r\nGreen Tea\r\n\r\nThai Tea\r\n" +
+    "\r\nCoCoa";
             // 
             // ok_pay
             // 
@@ -740,7 +740,7 @@
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(89, 45);
             this.clear.TabIndex = 6;
-            this.clear.Text = "clear";
+            this.clear.Text = "Clear";
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click_1);
             // 
@@ -748,6 +748,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1255, 604);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.p_txt);
