@@ -13,7 +13,33 @@ namespace coffee_pos_6034102143
     public partial class Form1 : Form
     {
         List<Tuple<string, string>> product = new List<Tuple<string, string>>();
+        //ListViewItem foundItem;
+        //string[] itemInList = new string[] { listView1.Items.ToString()
         bool ok=false,click=false;
+        double price;
+        public string[] getview()
+        {
+            price = 0;
+            string[] stopWordArray = new string[listView1.Items.Count];
+            int itemCount = listView1.Items.Count;
+            for (int i = 0; i < itemCount; i++)
+            {
+                price += double.Parse(listView1.Items[i].SubItems[1].Text); // 1 ดึงราคา
+                stopWordArray[i] = listView1.Items[i].SubItems[0].Text.ToString(); // 0 ดึงชื่อรายการ
+            }
+            p_txt.Text = price.ToString()+ " Baht";
+            return stopWordArray;
+        }
+        public void a()
+        {
+            product = new List<Tuple<string, string>>();
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            for(int i=0;i< listView1.Items.Count; i++) {
+                ListViewItem item0 = listView1.SelectedItems[i];
+                product.Add(new Tuple<string, string> (item0.SubItems[0].Text.ToString(), item0.SubItems[1].Text.ToString() ));
+            }
+        }
         public void showlist(string bath,string product)
         {
             if (click == false)
@@ -24,8 +50,22 @@ namespace coffee_pos_6034102143
             string[] row = { product,bath};
             var listViewItem = new ListViewItem(row);
             listView1.Items.Add(listViewItem);
-
-        }
+            var items = listView1.Items;
+            //ListViewItem[] itemsa = new ListViewItem[listView1.Items.Count];
+            //string[] rrr = new string[listView1.Items.Count];
+            //ListViewItem item = new ListViewItem(rrr);
+            //listView1.Items.CopyTo(itemsa, 0);
+            //a();
+            //string[] s = product.Select((t) => t.Value).ToArray();
+            //var strings = product[0];
+            //Console.WriteLine(strings);
+            //string[] items = listView1.Items.Select(x => x.Text).ToArray();
+            /*foreach (var value in getview())
+            {
+                Console.WriteLine(value);
+            }*/
+            getview();
+            }
         public Form1()
         {
             InitializeComponent();
@@ -205,6 +245,41 @@ namespace coffee_pos_6034102143
         private void nescafe1_Click(object sender, EventArgs e)
         {
             showlist("20", "Nescafe (Hot)");
+        }
+
+        private void Nescafe2_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Nescafe (Ice)");
+        }
+
+        private void Nescafe3_Click(object sender, EventArgs e)
+        {
+            showlist("30", "Nescafe (Frappe)");
+        }
+
+        private void nestca_tea_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Nestca Tea (Ice)");
+        }
+
+        private void nestca_tea_2_Click(object sender, EventArgs e)
+        {
+            showlist("30", "Nestca Tea (Ice)");
+        }
+
+        private void ls_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Ltalian Soda (Ice)");
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Red lime Soda (Ice)");
+        }
+
+        private void honey_lime_soda_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Honey lime Soda (Ice)");
         }
 
         private void Americano_ice_Click(object sender, EventArgs e)
