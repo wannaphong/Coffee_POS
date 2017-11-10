@@ -157,6 +157,56 @@ namespace coffee_pos_6034102143
             showlist("30", "CoCoa (Frappe)");
         }
 
+        private void Milk_hot_Click(object sender, EventArgs e)
+        {
+            showlist("20", "Milk (Hot)");
+        }
+
+        private void Milk_ice_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Milk (Ice)");
+        }
+
+        private void milk_tea_ice_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Milk Tea (Ice)");
+        }
+
+        private void milk_tea_frappe_Click(object sender, EventArgs e)
+        {
+            showlist("30", "Milk Tea (Frappe)");
+        }
+
+        private void lemon_tea_Click(object sender, EventArgs e)
+        {
+            showlist("25", "Lemon Tea (Ice)");
+        }
+
+        private void lemon_tea2_Click(object sender, EventArgs e)
+        {
+            showlist("30", "Lemon Tea (Frappe)");
+        }
+
+        private void milo1_Click(object sender, EventArgs e)
+        {
+            showlist("20", "Milo (Hot)");
+        }
+
+        private void Milk2_Click(object sender, EventArgs e) // Milo
+        {
+            showlist("25", "Milo (Ice)");
+        }
+
+        private void button39_Click(object sender, EventArgs e) // Milo
+        {
+            showlist("30", "Milo (Frappe)");
+        }
+
+        private void nescafe1_Click(object sender, EventArgs e)
+        {
+            showlist("20", "Nescafe (Hot)");
+        }
+
         private void Americano_ice_Click(object sender, EventArgs e)
         {
             showlist("45", "Americano (Ice)");

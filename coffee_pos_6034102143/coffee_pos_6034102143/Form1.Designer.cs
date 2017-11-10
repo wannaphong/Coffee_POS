@@ -34,8 +34,8 @@
             this.button41 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
+            this.lemon_tea2 = new System.Windows.Forms.Button();
+            this.milk_tea_frappe = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
             this.CoCoa_frappe = new System.Windows.Forms.Button();
             this.Thai_Tea_frappe = new System.Windows.Forms.Button();
@@ -49,10 +49,10 @@
             this.button26 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.Milk2 = new System.Windows.Forms.Button();
+            this.lemon_tea = new System.Windows.Forms.Button();
+            this.milk_tea_ice = new System.Windows.Forms.Button();
+            this.Milk_ice = new System.Windows.Forms.Button();
             this.CoCoa_ice = new System.Windows.Forms.Button();
             this.Thai_Tea_ice = new System.Windows.Forms.Button();
             this.GreenIce_ice = new System.Windows.Forms.Button();
@@ -61,9 +61,9 @@
             this.Latte_ice = new System.Windows.Forms.Button();
             this.Americano_ice = new System.Windows.Forms.Button();
             this.Esspresso_ice = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.nescafe1 = new System.Windows.Forms.Button();
+            this.milo1 = new System.Windows.Forms.Button();
+            this.Milk_hot = new System.Windows.Forms.Button();
             this.CoCoa_hot = new System.Windows.Forms.Button();
             this.Thai_Tea_hot = new System.Windows.Forms.Button();
             this.GreenIce_hot = new System.Windows.Forms.Button();
@@ -111,8 +111,8 @@
             this.tabPage1.Controls.Add(this.button41);
             this.tabPage1.Controls.Add(this.button40);
             this.tabPage1.Controls.Add(this.button39);
-            this.tabPage1.Controls.Add(this.button38);
-            this.tabPage1.Controls.Add(this.button37);
+            this.tabPage1.Controls.Add(this.lemon_tea2);
+            this.tabPage1.Controls.Add(this.milk_tea_frappe);
             this.tabPage1.Controls.Add(this.button36);
             this.tabPage1.Controls.Add(this.CoCoa_frappe);
             this.tabPage1.Controls.Add(this.Thai_Tea_frappe);
@@ -126,10 +126,10 @@
             this.tabPage1.Controls.Add(this.button26);
             this.tabPage1.Controls.Add(this.button25);
             this.tabPage1.Controls.Add(this.button24);
-            this.tabPage1.Controls.Add(this.button23);
-            this.tabPage1.Controls.Add(this.button22);
-            this.tabPage1.Controls.Add(this.button21);
-            this.tabPage1.Controls.Add(this.button20);
+            this.tabPage1.Controls.Add(this.Milk2);
+            this.tabPage1.Controls.Add(this.lemon_tea);
+            this.tabPage1.Controls.Add(this.milk_tea_ice);
+            this.tabPage1.Controls.Add(this.Milk_ice);
             this.tabPage1.Controls.Add(this.CoCoa_ice);
             this.tabPage1.Controls.Add(this.Thai_Tea_ice);
             this.tabPage1.Controls.Add(this.GreenIce_ice);
@@ -138,9 +138,9 @@
             this.tabPage1.Controls.Add(this.Latte_ice);
             this.tabPage1.Controls.Add(this.Americano_ice);
             this.tabPage1.Controls.Add(this.Esspresso_ice);
-            this.tabPage1.Controls.Add(this.button11);
-            this.tabPage1.Controls.Add(this.button10);
-            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.nescafe1);
+            this.tabPage1.Controls.Add(this.milo1);
+            this.tabPage1.Controls.Add(this.Milk_hot);
             this.tabPage1.Controls.Add(this.CoCoa_hot);
             this.tabPage1.Controls.Add(this.Thai_Tea_hot);
             this.tabPage1.Controls.Add(this.GreenIce_hot);
@@ -186,24 +186,27 @@
             this.button39.TabIndex = 41;
             this.button39.Text = "Frappe\r\n30 Bath";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
-            // button38
+            // lemon_tea2
             // 
-            this.button38.Location = new System.Drawing.Point(746, 119);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(60, 41);
-            this.button38.TabIndex = 40;
-            this.button38.Text = "Frappe\r\n30 Bath";
-            this.button38.UseVisualStyleBackColor = true;
+            this.lemon_tea2.Location = new System.Drawing.Point(746, 119);
+            this.lemon_tea2.Name = "lemon_tea2";
+            this.lemon_tea2.Size = new System.Drawing.Size(60, 41);
+            this.lemon_tea2.TabIndex = 40;
+            this.lemon_tea2.Text = "Frappe\r\n30 Bath";
+            this.lemon_tea2.UseVisualStyleBackColor = true;
+            this.lemon_tea2.Click += new System.EventHandler(this.lemon_tea2_Click);
             // 
-            // button37
+            // milk_tea_frappe
             // 
-            this.button37.Location = new System.Drawing.Point(746, 67);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(60, 41);
-            this.button37.TabIndex = 39;
-            this.button37.Text = "Frappe\r\n30 Bath";
-            this.button37.UseVisualStyleBackColor = true;
+            this.milk_tea_frappe.Location = new System.Drawing.Point(746, 67);
+            this.milk_tea_frappe.Name = "milk_tea_frappe";
+            this.milk_tea_frappe.Size = new System.Drawing.Size(60, 41);
+            this.milk_tea_frappe.TabIndex = 39;
+            this.milk_tea_frappe.Text = "Frappe\r\n30 Bath";
+            this.milk_tea_frappe.UseVisualStyleBackColor = true;
+            this.milk_tea_frappe.Click += new System.EventHandler(this.milk_tea_frappe_Click);
             // 
             // button36
             // 
@@ -329,41 +332,45 @@
             this.button24.Text = "Ice\r\n25 Bath";
             this.button24.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // Milk2
             // 
-            this.button23.Location = new System.Drawing.Point(662, 166);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(60, 41);
-            this.button23.TabIndex = 26;
-            this.button23.Text = "Ice\r\n25 Bath";
-            this.button23.UseVisualStyleBackColor = true;
+            this.Milk2.Location = new System.Drawing.Point(662, 166);
+            this.Milk2.Name = "Milk2";
+            this.Milk2.Size = new System.Drawing.Size(60, 41);
+            this.Milk2.TabIndex = 26;
+            this.Milk2.Text = "Ice\r\n25 Bath";
+            this.Milk2.UseVisualStyleBackColor = true;
+            this.Milk2.Click += new System.EventHandler(this.Milk2_Click);
             // 
-            // button22
+            // lemon_tea
             // 
-            this.button22.Location = new System.Drawing.Point(662, 119);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(60, 41);
-            this.button22.TabIndex = 25;
-            this.button22.Text = "Ice\r\n25 Bath";
-            this.button22.UseVisualStyleBackColor = true;
+            this.lemon_tea.Location = new System.Drawing.Point(662, 119);
+            this.lemon_tea.Name = "lemon_tea";
+            this.lemon_tea.Size = new System.Drawing.Size(60, 41);
+            this.lemon_tea.TabIndex = 25;
+            this.lemon_tea.Text = "Ice\r\n25 Bath";
+            this.lemon_tea.UseVisualStyleBackColor = true;
+            this.lemon_tea.Click += new System.EventHandler(this.lemon_tea_Click);
             // 
-            // button21
+            // milk_tea_ice
             // 
-            this.button21.Location = new System.Drawing.Point(662, 67);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(60, 41);
-            this.button21.TabIndex = 24;
-            this.button21.Text = "Ice\r\n25 Bath";
-            this.button21.UseVisualStyleBackColor = true;
+            this.milk_tea_ice.Location = new System.Drawing.Point(662, 67);
+            this.milk_tea_ice.Name = "milk_tea_ice";
+            this.milk_tea_ice.Size = new System.Drawing.Size(60, 41);
+            this.milk_tea_ice.TabIndex = 24;
+            this.milk_tea_ice.Text = "Ice\r\n25 Bath";
+            this.milk_tea_ice.UseVisualStyleBackColor = true;
+            this.milk_tea_ice.Click += new System.EventHandler(this.milk_tea_ice_Click);
             // 
-            // button20
+            // Milk_ice
             // 
-            this.button20.Location = new System.Drawing.Point(662, 16);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(60, 41);
-            this.button20.TabIndex = 23;
-            this.button20.Text = "Ice\r\n25 Bath";
-            this.button20.UseVisualStyleBackColor = true;
+            this.Milk_ice.Location = new System.Drawing.Point(662, 16);
+            this.Milk_ice.Name = "Milk_ice";
+            this.Milk_ice.Size = new System.Drawing.Size(60, 41);
+            this.Milk_ice.TabIndex = 23;
+            this.Milk_ice.Text = "Ice\r\n25 Bath";
+            this.Milk_ice.UseVisualStyleBackColor = true;
+            this.Milk_ice.Click += new System.EventHandler(this.Milk_ice_Click);
             // 
             // CoCoa_ice
             // 
@@ -445,32 +452,35 @@
             this.Esspresso_ice.UseVisualStyleBackColor = true;
             this.Esspresso_ice.Click += new System.EventHandler(this.Esspresso_ice_Click);
             // 
-            // button11
+            // nescafe1
             // 
-            this.button11.Location = new System.Drawing.Point(576, 215);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(60, 41);
-            this.button11.TabIndex = 14;
-            this.button11.Text = "Hot\r\n20 Bath";
-            this.button11.UseVisualStyleBackColor = true;
+            this.nescafe1.Location = new System.Drawing.Point(576, 215);
+            this.nescafe1.Name = "nescafe1";
+            this.nescafe1.Size = new System.Drawing.Size(60, 41);
+            this.nescafe1.TabIndex = 14;
+            this.nescafe1.Text = "Hot\r\n20 Bath";
+            this.nescafe1.UseVisualStyleBackColor = true;
+            this.nescafe1.Click += new System.EventHandler(this.nescafe1_Click);
             // 
-            // button10
+            // milo1
             // 
-            this.button10.Location = new System.Drawing.Point(576, 168);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(60, 41);
-            this.button10.TabIndex = 13;
-            this.button10.Text = "Hot\r\n20 Bath";
-            this.button10.UseVisualStyleBackColor = true;
+            this.milo1.Location = new System.Drawing.Point(576, 168);
+            this.milo1.Name = "milo1";
+            this.milo1.Size = new System.Drawing.Size(60, 41);
+            this.milo1.TabIndex = 13;
+            this.milo1.Text = "Hot\r\n20 Bath";
+            this.milo1.UseVisualStyleBackColor = true;
+            this.milo1.Click += new System.EventHandler(this.milo1_Click);
             // 
-            // button6
+            // Milk_hot
             // 
-            this.button6.Location = new System.Drawing.Point(576, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 41);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Hot\r\n20 Bath";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Milk_hot.Location = new System.Drawing.Point(576, 16);
+            this.Milk_hot.Name = "Milk_hot";
+            this.Milk_hot.Size = new System.Drawing.Size(60, 41);
+            this.Milk_hot.TabIndex = 12;
+            this.Milk_hot.Text = "Hot\r\n20 Bath";
+            this.Milk_hot.UseVisualStyleBackColor = true;
+            this.Milk_hot.Click += new System.EventHandler(this.Milk_hot_Click);
             // 
             // CoCoa_hot
             // 
@@ -653,9 +663,9 @@
         private System.Windows.Forms.TabPage About;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button nescafe1;
+        private System.Windows.Forms.Button milo1;
+        private System.Windows.Forms.Button Milk_hot;
         private System.Windows.Forms.Button CoCoa_hot;
         private System.Windows.Forms.Button Thai_Tea_hot;
         private System.Windows.Forms.Button GreenIce_hot;
@@ -669,10 +679,10 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button Milk2;
+        private System.Windows.Forms.Button lemon_tea;
+        private System.Windows.Forms.Button milk_tea_ice;
+        private System.Windows.Forms.Button Milk_ice;
         private System.Windows.Forms.Button CoCoa_ice;
         private System.Windows.Forms.Button Thai_Tea_ice;
         private System.Windows.Forms.Button GreenIce_ice;
@@ -684,8 +694,8 @@
         private System.Windows.Forms.Button button41;
         private System.Windows.Forms.Button button40;
         private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button38;
-        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button lemon_tea2;
+        private System.Windows.Forms.Button milk_tea_frappe;
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button CoCoa_frappe;
         private System.Windows.Forms.Button Thai_Tea_frappe;
