@@ -17,6 +17,7 @@ namespace coffee_pos_6034102143
         //string[] itemInList = new string[] { listView1.Items.ToString()
         bool ok=false,click=false;
         double price;
+        string file_path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         public string[] getview()
         {
             price = 0;
@@ -29,6 +30,34 @@ namespace coffee_pos_6034102143
             }
             p_txt.Text = price.ToString()+ " Baht";
             return stopWordArray;
+        }
+        public string[] getview2()
+        {
+            string[] stopWordArray = new string[listView1.Items.Count];
+            int itemCount = listView1.Items.Count;
+            for (int i = 0; i < itemCount; i++)
+            {
+                stopWordArray[i] = listView1.Items[i].SubItems[1].Text.ToString(); // 0 ดึงชื่อรายการ
+            }
+            return stopWordArray;
+        }
+        public void getItem()
+        {
+            string[] list= getview(); // ชื่อสินค้า
+            string[] list2 = getview2(); // ราคา
+            string WriteText = "tontan_coffee"+ DateTime.Now.ToString("hhmmss_dd_MM_yyyy");
+            string bill = "TonTan Coffee";
+            bill += "\r\n" + DateTime.Now.ToString("hh:mm:ss") + "\r\n"+ DateTime.Now.ToString("dd/MM/yyyy") + "\r\n" + "\r\n";
+            bill +="List" + "\r\n";
+            for (int i=0;i< listView1.Items.Count;i++)
+            {
+                bill += list[i]+ new String(' ', 20)+list2[i] + " Baht" + "\r\n";
+            }
+            bill += "\r\n";
+            bill += "Total price : " + p_txt.Text;
+            show_bill.Text = bill;
+            System.IO.File.WriteAllText(file_path+@"\"+ WriteText+".txt", bill);
+            show_bill.Text += "\r\n" + "\r\n" + "\r\n" + "\r\n" + "Save File at " + file_path + @"\" + WriteText + ".txt";
         }
         public void a()
         {
@@ -85,6 +114,7 @@ namespace coffee_pos_6034102143
                 tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
             }
             else tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
+            getItem();
         }
 
         private void Esspresso_hot_Click(object sender, EventArgs e)
@@ -280,6 +310,11 @@ namespace coffee_pos_6034102143
         private void honey_lime_soda_Click(object sender, EventArgs e)
         {
             showlist("25", "Honey lime Soda (Ice)");
+        }
+
+        private void Milk_frappe_Click(object sender, EventArgs e)
+        {
+            showlist("30", "Milk (Frappe)");
         }
 
         private void Americano_ice_Click(object sender, EventArgs e)

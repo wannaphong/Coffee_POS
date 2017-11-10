@@ -73,7 +73,7 @@
             this.GreenIce_frappe = new System.Windows.Forms.Button();
             this.Thai_Tea_frappe = new System.Windows.Forms.Button();
             this.CoCoa_frappe = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.Milk_frappe = new System.Windows.Forms.Button();
             this.milk_tea_frappe = new System.Windows.Forms.Button();
             this.lemon_tea2 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
@@ -82,6 +82,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.label4 = new System.Windows.Forms.Label();
             this.p_txt = new System.Windows.Forms.Label();
+            this.Payment.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -129,6 +130,7 @@
             // 
             // Payment
             // 
+            this.Payment.Controls.Add(this.show_bill);
             this.Payment.Location = new System.Drawing.Point(4, 22);
             this.Payment.Name = "Payment";
             this.Payment.Padding = new System.Windows.Forms.Padding(3);
@@ -145,7 +147,7 @@
             this.tabPage1.Controls.Add(this.button39);
             this.tabPage1.Controls.Add(this.lemon_tea2);
             this.tabPage1.Controls.Add(this.milk_tea_frappe);
-            this.tabPage1.Controls.Add(this.button36);
+            this.tabPage1.Controls.Add(this.Milk_frappe);
             this.tabPage1.Controls.Add(this.CoCoa_frappe);
             this.tabPage1.Controls.Add(this.Thai_Tea_frappe);
             this.tabPage1.Controls.Add(this.GreenIce_frappe);
@@ -574,14 +576,15 @@
             this.CoCoa_frappe.UseVisualStyleBackColor = true;
             this.CoCoa_frappe.Click += new System.EventHandler(this.CoCoa_frappe_Click);
             // 
-            // button36
+            // Milk_frappe
             // 
-            this.button36.Location = new System.Drawing.Point(746, 16);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(60, 41);
-            this.button36.TabIndex = 38;
-            this.button36.Text = "Frappe\r\n30 Bath";
-            this.button36.UseVisualStyleBackColor = true;
+            this.Milk_frappe.Location = new System.Drawing.Point(746, 16);
+            this.Milk_frappe.Name = "Milk_frappe";
+            this.Milk_frappe.Size = new System.Drawing.Size(60, 41);
+            this.Milk_frappe.TabIndex = 38;
+            this.Milk_frappe.Text = "Frappe\r\n30 Bath";
+            this.Milk_frappe.UseVisualStyleBackColor = true;
+            this.Milk_frappe.Click += new System.EventHandler(this.Milk_frappe_Click);
             // 
             // milk_tea_frappe
             // 
@@ -663,6 +666,15 @@
             this.p_txt.Size = new System.Drawing.Size(0, 25);
             this.p_txt.TabIndex = 4;
             // 
+            // show_bill
+            // 
+            this.show_bill.AutoSize = true;
+            this.show_bill.Location = new System.Drawing.Point(26, 18);
+            this.show_bill.Name = "show_bill";
+            this.show_bill.Size = new System.Drawing.Size(35, 13);
+            this.show_bill.TabIndex = 0;
+            this.show_bill.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,9 +685,12 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Coffee POS";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Payment.ResumeLayout(false);
+            this.Payment.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -698,7 +713,7 @@
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button lemon_tea2;
         private System.Windows.Forms.Button milk_tea_frappe;
-        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button Milk_frappe;
         private System.Windows.Forms.Button CoCoa_frappe;
         private System.Windows.Forms.Button Thai_Tea_frappe;
         private System.Windows.Forms.Button GreenIce_frappe;
@@ -740,6 +755,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label p_txt;
+        private System.Windows.Forms.Label show_bill;
     }
 }
 
