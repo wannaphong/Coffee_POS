@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace coffee_pos_6034102143
@@ -13,12 +8,10 @@ namespace coffee_pos_6034102143
     public partial class Form1 : Form
     {
         List<Tuple<string, string>> product = new List<Tuple<string, string>>();
-        //ListViewItem foundItem;
-        //string[] itemInList = new string[] { listView1.Items.ToString()
         bool ok=false,click=false;
         double price;
         string file_path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public string[] getview()
+        public string[] getproduct()
         {
             price = 0;
             string[] stopWordArray = new string[listView1.Items.Count];
@@ -31,7 +24,7 @@ namespace coffee_pos_6034102143
             p_txt.Text = price.ToString()+ " Baht";
             return stopWordArray;
         }
-        public string[] getview2()
+        public string[] getprice()
         {
             string[] stopWordArray = new string[listView1.Items.Count];
             int itemCount = listView1.Items.Count;
@@ -43,8 +36,8 @@ namespace coffee_pos_6034102143
         }
         public void getItem()
         {
-            string[] list= getview(); // ชื่อสินค้า
-            string[] list2 = getview2(); // ราคา
+            string[] list= getproduct(); // ชื่อสินค้า
+            string[] list2 = getprice(); // ราคา
             string WriteText = "tontan_coffee"+ DateTime.Now.ToString("hhmmss_dd_MM_yyyy");
             string bill = "TonTan Coffee";
             bill += "\r\n" + DateTime.Now.ToString("hh:mm:ss") + "\r\n"+ DateTime.Now.ToString("dd/MM/yyyy") + "\r\n" + "\r\n";
@@ -59,16 +52,6 @@ namespace coffee_pos_6034102143
             System.IO.File.WriteAllText(file_path+@"\"+ WriteText+".txt", bill);
             show_bill.Text += "\r\n" + "\r\n" + "\r\n" + "\r\n" + "Save File at " + file_path + @"\" + WriteText + ".txt";
         }
-        public void a()
-        {
-            product = new List<Tuple<string, string>>();
-            if (listView1.SelectedItems.Count == 0)
-                return;
-            for(int i=0;i< listView1.Items.Count; i++) {
-                ListViewItem item0 = listView1.SelectedItems[i];
-                product.Add(new Tuple<string, string> (item0.SubItems[0].Text.ToString(), item0.SubItems[1].Text.ToString() ));
-            }
-        }
         public void showlist(string bath,string product)
         {
             if (click == false)
@@ -80,20 +63,7 @@ namespace coffee_pos_6034102143
             var listViewItem = new ListViewItem(row);
             listView1.Items.Add(listViewItem);
             var items = listView1.Items;
-            //ListViewItem[] itemsa = new ListViewItem[listView1.Items.Count];
-            //string[] rrr = new string[listView1.Items.Count];
-            //ListViewItem item = new ListViewItem(rrr);
-            //listView1.Items.CopyTo(itemsa, 0);
-            //a();
-            //string[] s = product.Select((t) => t.Value).ToArray();
-            //var strings = product[0];
-            //Console.WriteLine(strings);
-            //string[] items = listView1.Items.Select(x => x.Text).ToArray();
-            /*foreach (var value in getview())
-            {
-                Console.WriteLine(value);
-            }*/
-            getview();
+            getproduct();
             }
         public Form1()
         {
@@ -114,6 +84,7 @@ namespace coffee_pos_6034102143
                 tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
             }
             else tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
+            if(listView1.Items.Count>0)
             getItem();
         }
 
@@ -315,6 +286,31 @@ namespace coffee_pos_6034102143
         private void Milk_frappe_Click(object sender, EventArgs e)
         {
             showlist("30", "Milk (Frappe)");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo(linkLabel1.Text);
+            Process.Start(sInfo);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo(linkLabel2.Text);
+            Process.Start(sInfo);
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo(linkLabel3.Text);
+            Process.Start(sInfo);
+        }
+
+        private void clear_Click_1(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            p_txt.Text = "";
+            show_bill.Text = "";
         }
 
         private void Americano_ice_Click(object sender, EventArgs e)
