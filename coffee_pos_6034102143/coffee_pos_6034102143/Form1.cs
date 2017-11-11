@@ -7,7 +7,7 @@ namespace coffee_pos_6034102143
 {
     public partial class Form1 : Form
     {
-        List<Tuple<string, string>> product = new List<Tuple<string, string>>();
+        //List<Tuple<string, string>> product = new List<Tuple<string, string>>();
         double money;
         bool ok=false,click=false;
         double price;
