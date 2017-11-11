@@ -115,6 +115,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.listView1.Location = new System.Drawing.Point(862, 113);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(381, 314);
@@ -773,9 +774,10 @@
             // 
             // receive_money
             // 
+            this.receive_money.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.receive_money.Location = new System.Drawing.Point(996, 488);
             this.receive_money.Name = "receive_money";
-            this.receive_money.Size = new System.Drawing.Size(100, 20);
+            this.receive_money.Size = new System.Drawing.Size(100, 29);
             this.receive_money.TabIndex = 8;
             // 
             // label8
@@ -827,7 +829,6 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ok_pay);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
