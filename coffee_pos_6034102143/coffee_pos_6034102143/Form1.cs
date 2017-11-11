@@ -8,6 +8,7 @@ namespace coffee_pos_6034102143
     public partial class Form1 : Form
     {
         List<Tuple<string, string>> product = new List<Tuple<string, string>>();
+        double money;
         bool ok=false,click=false;
         double price;
         string file_path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -48,6 +49,9 @@ namespace coffee_pos_6034102143
             }
             bill += "\r\n";
             bill += "Total price : " + p_txt.Text;
+            bill += "\r\n";
+            bill += "Receive Money : "+receive_money.Text + " Baht" + "\r\n";
+            bill += Give_the_change.Text;
             show_bill.Text = bill;
             System.IO.File.WriteAllText(file_path+@"\"+ WriteText+".txt", bill);
             show_bill.Text += "\r\n" + "\r\n" + "\r\n" + "\r\n" + "Save File at " + file_path + @"\" + WriteText + ".txt";
@@ -74,18 +78,45 @@ namespace coffee_pos_6034102143
         {
             tabControl1.Controls.Remove(Payment); // ลบ Payment ออกจาก tabControl1
             listView1.Enabled = false;
+            Give_the_change.Enabled = false;
         }
 
         private void ok_pay_Click(object sender, EventArgs e)
         {
-            if (ok == false) {
-                tabControl1.TabPages.Insert(1,Payment); // เพิ่ม Payment
-                ok = true;
-                tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
+            try
+            {
+                if (receive_money.Text != "" && p_txt.Text != "")
+                {
+
+                    money = double.Parse(receive_money.Text.ToString()) - price;
+                    if (money >= 0)
+                    {
+                        if (ok == false)
+                        {
+                            tabControl1.TabPages.Insert(1, Payment); // เพิ่ม Payment
+                            ok = true;
+                            tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
+                        }
+                        else tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
+                        Give_the_change.Enabled = true;
+                        Give_the_change.Text = "Give the change : " + money.ToString() + " Baht";
+                        if (listView1.Items.Count > 0)
+                            getItem();
+                    }
+                    else
+                    {
+                        MessageBox.Show("The money is not enough.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select the product and fill in the money.");
+                }
             }
-            else tabControl1.SelectedTab = Payment; // กำหนดให้เลือกTab ชื่อ Payment มาแสดงผล
-            if(listView1.Items.Count>0)
-            getItem();
+            catch
+            {
+                MessageBox.Show("Please select the product and fill in the money.");
+            }
         }
 
         private void Esspresso_hot_Click(object sender, EventArgs e)
@@ -309,8 +340,20 @@ namespace coffee_pos_6034102143
         private void clear_Click_1(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+            ok = false;
+            //listView1.Enabled = false;
+            tabControl1.Controls.Remove(Payment); // ลบ Payment ออกจาก tabControl1
             p_txt.Text = "";
             show_bill.Text = "";
+            money = 0;
+            receive_money.Text = "";
+            Give_the_change.Text = "Give the change :";
+            Give_the_change.Enabled = false;
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void Americano_ice_Click(object sender, EventArgs e)

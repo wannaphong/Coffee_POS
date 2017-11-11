@@ -38,6 +38,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.Payment = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.show_bill = new System.Windows.Forms.Label();
             this.Home = new System.Windows.Forms.TabPage();
             this.nestca_tea_2 = new System.Windows.Forms.Button();
@@ -88,6 +89,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.p_txt = new System.Windows.Forms.Label();
             this.clear = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.receive_money = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Give_the_change = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.About.SuspendLayout();
             this.Payment.SuspendLayout();
             this.Home.SuspendLayout();
@@ -111,7 +117,7 @@
             this.columnHeader2});
             this.listView1.Location = new System.Drawing.Point(862, 113);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(381, 399);
+            this.listView1.Size = new System.Drawing.Size(381, 314);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -189,6 +195,7 @@
             // 
             // Payment
             // 
+            this.Payment.Controls.Add(this.label7);
             this.Payment.Controls.Add(this.show_bill);
             this.Payment.Location = new System.Drawing.Point(4, 22);
             this.Payment.Name = "Payment";
@@ -198,11 +205,21 @@
             this.Payment.Text = "Payment";
             this.Payment.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label7.Location = new System.Drawing.Point(26, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Receipt";
+            // 
             // show_bill
             // 
             this.show_bill.AutoSize = true;
             this.show_bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.show_bill.Location = new System.Drawing.Point(15, 13);
+            this.show_bill.Location = new System.Drawing.Point(25, 47);
             this.show_bill.Name = "show_bill";
             this.show_bill.Size = new System.Drawing.Size(51, 20);
             this.show_bill.TabIndex = 0;
@@ -719,17 +736,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.Location = new System.Drawing.Point(932, 530);
+            this.label4.Location = new System.Drawing.Point(882, 451);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 24);
+            this.label4.Size = new System.Drawing.Size(108, 24);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Price";
+            this.label4.Text = "Total price :";
             // 
             // p_txt
             // 
             this.p_txt.AutoSize = true;
             this.p_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.p_txt.Location = new System.Drawing.Point(1015, 530);
+            this.p_txt.Location = new System.Drawing.Point(1020, 451);
             this.p_txt.Name = "p_txt";
             this.p_txt.Size = new System.Drawing.Size(0, 25);
             this.p_txt.TabIndex = 4;
@@ -744,12 +761,65 @@
             this.clear.UseVisualStyleBackColor = true;
             this.clear.Click += new System.EventHandler(this.clear_Click_1);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(848, 484);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(142, 24);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Receive Money";
+            // 
+            // receive_money
+            // 
+            this.receive_money.Location = new System.Drawing.Point(996, 488);
+            this.receive_money.Name = "receive_money";
+            this.receive_money.Size = new System.Drawing.Size(100, 20);
+            this.receive_money.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label8.Location = new System.Drawing.Point(1119, 484);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 24);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "baht";
+            // 
+            // Give_the_change
+            // 
+            this.Give_the_change.AutoSize = true;
+            this.Give_the_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Give_the_change.Location = new System.Drawing.Point(848, 527);
+            this.Give_the_change.Name = "Give_the_change";
+            this.Give_the_change.Size = new System.Drawing.Size(158, 24);
+            this.Give_the_change.TabIndex = 10;
+            this.Give_the_change.Text = "Give the change :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.Location = new System.Drawing.Point(1224, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 18);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "X";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1255, 604);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Give_the_change);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.receive_money);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.p_txt);
             this.Controls.Add(this.label4);
@@ -757,6 +827,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ok_pay);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -837,6 +908,12 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox receive_money;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Give_the_change;
+        private System.Windows.Forms.Label label9;
     }
 }
 
