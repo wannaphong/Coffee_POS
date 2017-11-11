@@ -15,25 +15,25 @@ namespace coffee_pos_6034102143
         public string[] getproduct()
         {
             price = 0;
-            string[] stopWordArray = new string[listView1.Items.Count];
+            string[] listproduct = new string[listView1.Items.Count];
             int itemCount = listView1.Items.Count;
             for (int i = 0; i < itemCount; i++)
             {
                 price += double.Parse(listView1.Items[i].SubItems[1].Text); // 1 ดึงราคา
-                stopWordArray[i] = listView1.Items[i].SubItems[0].Text.ToString(); // 0 ดึงชื่อรายการ
+                listproduct[i] = listView1.Items[i].SubItems[0].Text.ToString(); // 0 ดึงชื่อรายการ
             }
             p_txt.Text = price.ToString()+ " Baht";
-            return stopWordArray;
+            return listproduct;
         }
         public string[] getprice()
         {
-            string[] stopWordArray = new string[listView1.Items.Count];
+            string[] listprice = new string[listView1.Items.Count];
             int itemCount = listView1.Items.Count;
             for (int i = 0; i < itemCount; i++)
             {
-                stopWordArray[i] = listView1.Items[i].SubItems[1].Text.ToString(); // 0 ดึงชื่อรายการ
+                listprice[i] = listView1.Items[i].SubItems[1].Text.ToString(); // 0 ดึงชื่อรายการ
             }
-            return stopWordArray;
+            return listprice;
         }
         public void getItem()
         {
